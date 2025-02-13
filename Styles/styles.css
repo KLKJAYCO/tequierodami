@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fondo oscuro para resaltar el efecto neon */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-image: linear-gradient(45deg, #ff80b5, #ff66cc, #ff33cc, #ff00ff);
+    background-size: 300% 300%;
+    animation: neonBackground 10s ease infinite;
+  }
+  .loader {
+    border: 4px solid #f3f3f3; /* Color del borde */
+    border-top: 4px solid #ff66cc; /* Color de la parte superior del borde */
+    border-radius: 50%; /* Hacerlo redondo */
+    width: 30px; /* Tamaño del círculo */
+    height: 30px; /* Tamaño del círculo */
+    animation: spin 1s linear infinite; /* Animación de giro */
+    margin-top: 10px;
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto; /* Centrado horizontal */
+    display: block; /* Hacer que sea un bloque para aplicar los márgenes */
+  }
+  
+  /* Animación de rotación */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
+  @keyframes neonBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes parpadeo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Nueva animación para el cuerpo */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2); /* Puede aumentar el tamaño para simular el alejamiento */
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards; /* Desvanecimiento en 1 segundo */
+}
+
+  
+  .message.success {
+    animation: parpadeo 1s ease-in-out infinite; /* Animación de parpadeo */
+    text-shadow: 0 0 10px rgb(250, 0, 133), 0 0 20px rgb(255, 0, 136), 0 0 30px rgb(255, 0, 136); /* Efecto de resplandor */
+  }
+  
+  
+  
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente para el cuadro */
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.8); /* Efecto de neón rosa alrededor */
+    width: 300px; /* Establece el tamaño del contenedor */
+    text-align: center;
+    margin: 0 auto; /* Esto asegura que el contenedor esté centrado horizontalmente */
+    transition: box-shadow 0.3s ease-in-out; /* Efecto de transición para el resplandor */
+  }
+  
+  .login-container:hover {
+    box-shadow: 0 0 30px rgb(255, 20, 147); /* Resplandor neón al pasar el cursor */
+  }
+  
+  input[type="text"] {
+    width: 80%; /* Reducir el ancho del campo de texto */
+    padding: 10px;
+    margin-bottom: 20px; /* Separación entre el input y el botón */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordes redondeados en el campo de entrada */
+    text-align: center; /* Centra el texto dentro del input */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra el input dentro del contenedor */
+    transition: border-color 0.3s ease-in-out; /* Efecto de transición en el borde */
+  }
+  
+  input[type="text"]:focus {
+    outline: none; /* Quita el contorno por defecto */
+    border-color: #ff00ff; /* Borde neón al estar enfocado */
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #ff33cc; /* Rosa brillante */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados en el botón */
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8); /* Resplandor rosa neon */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+  }
+  
+  button:hover {
+    background-color: #ff00ff; /* Cambia el color al pasar el cursor */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 1); /* Aumenta el resplandor al hacer hover */
+  }
+  
+  .message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: #ff66cc;
+  }
+  
+  .error {
+    color: #ff3399;
+  }
+  
