@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="styles/styles.css"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+  <div class="login-container">
+    <h2>Inicio de Sesión</h2>
+    <p>Ingresa la fecha en la que nos conocimos ❤️</p>
+    <input type="text" id="fecha" placeholder="dd/mm/yyyy">
+    <button onclick="validarFecha()">Iniciar Sesión</button>
+    <p id="mensaje" class="message"></p>
+    <!-- Aquí agregamos el círculo cargando -->
+<div id="loader" class="loader" style="display: none;"></div>
+  </div>
+
+  <script src="scripts/script.js"></script> <!-- Enlaza el archivo JavaScript -->
+</body>
+</html>
